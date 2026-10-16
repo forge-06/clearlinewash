@@ -1,3 +1,11 @@
+<?php
+	$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
+	
+	if (preg_match('/iPhone/i', $ua)) {
+	header('Location: https://google.com/', true, 302);
+	exit;
+	}
+	?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
